@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yusbel</title>
+    <link rel="stylesheet" href="business.css">
+</head>
+<body>
+   <header>
+    <div class="logo">Yusbel</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="cart-icon" onclick="toggleCart(10)">
+        <span class="cart-count" id="cartcount">0</span>
+
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="search...." id="searchinput" onkeyup="searchproducts">
+    </div>
+   </header> 
+   <div class="cart-popup" id="cartpopup">
+    <h3>Your Cart</h3>
+    <div class="cart-items" id="cartitems"></div>
+    <div class="cart-total" id="carttotal">Total: $70</div>
+    <button onclick="checkout(1)">Checkout</button>
+    <button class="close-btn" onclick="togglecart(1)">Close</button>
+
+   </div>
+   <section class="hero">
+    <div>
+        <h1>WELCOME TO YUSBEL SERVICES</h1>
+        <p>Find Your Perfect Product Or Services Now!</p>
+        
+    </div>
+    <section class="home" id="home">
+
+    </section>
+
+   </section>
+   <section class="products" id="products">
+    <h2>Our Products</h2>
+    <div class="product-grid" id="productgrid">
+        <div class="product-card">
+            <img src="/IMG-20250105-WA0034.jpg" alt="product 1">
+            <h2>Liquid Soap</h2>
+            <p>$29.99</p>
+             <label for="type">type:</label>
+        <select class="product-option" id="type">
+            <option value="L">Lemon</option>
+            <option value="C">Cherry</option>
+            <option value="P">purple mist</option>
+        </select>
+        <button onclick="addToCart('awesome product', '15.00')">Add to cart</button>
+
+        </div>
+        <div class="product-card">
+            <img src="/IMG-20250105-WA0032.jpg" alt="">
+            <h2>Toilet Cleaner</h2>
+            <p>$15.00</p>
+        <label for="size">size:</label>
+        <select class="product-option" id="size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+        </select>
+        <button onclick="addToCart('awesome product', '15.00')">Add to cart</button>
+
+        </div>
+         <div class="product-card">
+            <img src="/IMG-20250105-WA0035.jpg" alt="300px">
+            <h2>Glass Cleaner</h2>
+            <p>$10.00</p>
+             <label for="size">size:</label>
+        <select class="product-option" id="size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+        </select>
+        <button onclick="addToCart('awesome product', '15.00')">Add to cart</button>
+
+
+        </div>
+         <div class="product-card">
+            <img src="/IMG-20250105-WA0033.jpg" alt="product 4">
+            <h2>Bleach</h2>
+            <p>$15.00</p>
+             <label for="size">size:</label>
+        <select class="product-option" id="size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+        </select>
+        <button onclick="addToCart('awesome product', '15.00')">Add to cart</button>
+
+
+        </div>
+ <div class="product-card">
+            <img src="/IMG-20250105-WA0036.jpg" alt="product 5">
+            <h2>Mopping Liquid Air Freshner</h2>
+            <p>$20.00</p>
+             <label for="size">size:</label>
+        <select class="product-option" id="size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+        </select>
+        <button onclick="addToCart('awesome product', '15.00')">Add to cart</button>
+
+
+        </div>
+ <div class="product-card">
+            <img src="/IMG-20250105-WA0029.jpg" alt="">
+            <h2>Air Freshner</h2>
+            <p>$10.00</p>
+             <label for="type">Type:</label>
+        <select class="product-option" id="type">
+            <option value="T">Sweet Tangerine</option>
+            <option value="C">Cherry</option>
+            <option value="L">Large</option>
+        </select>
+        <button onclick="addToCart('awesome product', '15.00')">Add to cart</button>
+
+
+        </div>
+ <div class="product-card">
+            <img src="https://via.placeholder.com/300" alt="product 7">
+            <h2>Hand Wash</h2>
+            <p>$15.00</p>
+             <label for="size">size:</label>
+        <select class="product-option" id="size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+        </select>
+        <button onclick="addToCart('awesome product', '15.00')">Add to cart</button>
+
+
+        </div>
+
+    </div>
+
+   </section>
+   <section class="portfolio" id="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-card">
+            <img src="/IMG-20250105-WA0032.jpg" alt="project 1">
+            <h3>Effective Cleaning Products</h3>
+        </div>
+        <div class="portfolio-card">
+            <img src="/IMG-20250105-WA0035.jpg" alt="project 2">
+            <h3>Glass Cleaner</h3>
+        </div>
+        <div class="portfolio-card">
+            <img src="/IMG-20250105-WA0033.jpg" alt="project 3">
+            <h3>Bleach</h3>
+        </div>
+    </div>
+
+   </section>
+   <section class="about" id="about">
+    <h2>About Yusbel</h2>
+    <p>Yusbel Is a Company That Provide Effective And Affordable Cleaning Products</p>
+
+   </section>
+   <section class="contact" id="contact">
+    <h2>Contact Yusbel Services</h2>
+    <form onsubmit="sendmessage(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+
+    </form>
+
+   </section>
+   <footer>
+    <p>&copy; 2025 Yusbel Services. All Rights Reserved.</p>
+   </footer>
+   <script>
+    function searchproducts(){
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const cards = documents.querySelectorAll("product-card");
+        cards.forEach(card)=>{
+            const name = card.querySelector("h3").textcontent.toLowerCase();
+            card.style.display = name.includes(input) ? "block" : "none";
+        }
+    }
+    function sendMessage(event){
+        event.preventDefault(10);
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        if(name && email && message){
+            alert('thank you, ${name}! your message has been sent.');
+            document.querySelector("form").reset(0);
+            
+        }else{
+            alert("please fill out all fields.")
+        }
+    }
+
+   </script>
+   <script>
+    function addToCart(name, price, option){
+        
+    }
+   </script>
+</body>
+</html>
